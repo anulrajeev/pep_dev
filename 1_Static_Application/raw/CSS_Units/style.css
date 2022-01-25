@@ -1,0 +1,47 @@
+.px-unit{
+    font-size: 32px;
+}
+
+.rem-unit{
+    font-size: 5rem;
+
+}
+
+.vh-vw-unit{
+    height: 20vh;
+    width: 20vw;
+    background-color: green;
+
+}
+
+.percent-unit{
+    height: 50%;
+    width: 50%;
+    background-color: hotpink;
+}
+
+.a{
+    height: 50vh;
+    width: 50vw;
+    background-color: indianred;
+}
+.b{
+    height: 25%;
+    width: 25%;
+    background-color: lawngreen;
+}
+.c{
+    height: 25%;
+    width: 25%;
+    background-color: aqua;
+}
+.d{
+    height: 25%;
+    width: 25%;
+    background-color: blue;
+}
+.e{
+    height: 25%;
+    width: 25%;
+    background-color: coral;
+}

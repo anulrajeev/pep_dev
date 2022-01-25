@@ -1,0 +1,2 @@
+file f2. 
+This content has been appended.

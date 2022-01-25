@@ -1,0 +1,23 @@
+.block1{
+    height: 2rem;
+    background-color: blue;
+}
+
+.block2{
+
+    background-color: orange;
+}
+
+.span1{
+    background-color: lightgreen;
+}
+
+.span2{
+    background-color: lightpink;
+    
+}
+
+.block3{
+
+    background-color: mediumpurple;
+}
