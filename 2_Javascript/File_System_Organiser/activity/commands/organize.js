@@ -7,7 +7,7 @@ let utility = {
     app: ['exe','dmg','pkg','deb']
 }
 function organizeFn(src) {
-    console.log("Organizing your folder");
+    // console.log("Organizing your folder");
     if(src==undefined )
         src=process.cwd();
     
