@@ -51,7 +51,7 @@ function getCategory(src)
 
 function organizeHelper(src, dest)
 {
-    console.log("organizing");
+    // console.log("organizing");
     let isFile = checkFileOrFolder(src);
     if (isFile == true) {  // Base case
         
