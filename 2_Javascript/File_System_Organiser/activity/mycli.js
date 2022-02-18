@@ -10,7 +10,7 @@ switch(command) {
         viewFn.view(input[1], input[2]);
         break;
     case "organize":
-        organizeFn.organize();
+        organizeFn.organize(input[1]);
         break;
     default: // help
         helpFn.help();
