@@ -15,6 +15,7 @@ function organizeFn(src) {
     organizeHelper(src, dest);
 }
 
+
 function createFolder(src, parameter)
 {
     let folderPath =path.join(src, parameter);
