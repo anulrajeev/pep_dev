@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="description-box">
+        <p>
+            <span>Hello World inside the span tag.</span>
+        </p>
+        <p>
+            <a href="">Hello World inside the a tag.</a>
+        </p>
+    </div>
+    <script>
+        let descBox = document.querySelector(".description-box");
+        // console.log(descBox);
+        let aElem = descBox.querySelector(" p > a ");
+        console.log(aElem.textContent);
+    </script>
+
+</body>
+
+</html>

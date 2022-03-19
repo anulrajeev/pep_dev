@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "async.js",
   "dependencies": {
+    "jsdom": "^19.0.0",
     "request": "^2.88.2"
   },
   "devDependencies": {},
