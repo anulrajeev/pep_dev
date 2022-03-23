@@ -3,7 +3,7 @@ var fs = require('fs');
 let request = require('request');
 const jsdom = require("jsdom");
 const { JSDOM } = jsdom;
-
+let xlsx = require("json-as-xlsx");
 let link = "https://www.espncricinfo.com/series/ipl-2021-1249214/match-results";
 
 let leaderboard=[];
@@ -63,10 +63,35 @@ function cb2(err, res, body){
     if(count==0)
     {
         // console.log(leaderboard);
+
+        //----------------writing into a json file-----------------------------
         var dictstring = JSON.stringify(leaderboard);       
         
         fs.writeFileSync("leaderBoard.json", dictstring);
 
+        //------------------writing it into an excel file--------------------------
+        let data = [
+            {
+              sheet: "Batsmen score",
+              columns: [
+                { label : "Batsman", value : "Batsman"},
+                { label : "Matches", value : "Matches"},
+                { label : "Runs", value : "Runs"},
+                { label : "Balls", value : "Balls"},
+                { label : "Fours", value : "Fours"},
+                { label : "Sixes", value : "Sixes"},
+              ],
+              content: leaderboard
+            }
+          ]
+          
+          let settings = {
+            fileName: "Batsmen Details", // Name of the resulting spreadsheet
+            extraLength: 5, // A bigger number means that columns will be wider
+            writeOptions: {}, // Style options from https://github.com/SheetJS/sheetjs#writing-options
+          }
+          
+          xlsx(data, settings) // Will download the excel file
         
     }
 }
