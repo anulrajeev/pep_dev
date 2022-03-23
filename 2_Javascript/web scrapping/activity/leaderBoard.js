@@ -1,36 +1,5 @@
-/*
-let request = require('request');
-const jsdom = require("jsdom");
-const { JSDOM } = jsdom;
 
-let link = "https://www.espncricinfo.com/series/ipl-2021-1249214/match-results";
-request(link, cb);
-
-function cb(err, res, body){
-    if(err)
-        console.log(err);
-    else{
-        const dom = new JSDOM(body);
-        let scorecardLinks = dom.window.document.querySelectorAll('a[data-hover="Scorecard"]');
-        for(let i=0;i<scorecardLinks.length;i++)
-            {
-                let linkofMatch = "https://www.espncricinfo.com/series/ipl-2021-1249214" + scorecardLinks[i].href;
-                
-                request(linkofMatch, cb2);
-                
-            }
-    }
-}
-
-function cb2(err, res, body){
-    if(err)
-        console.log(err);
-    else{
-        const dom = new JSDOM(body);
-    }
-}
-*/
-
+var fs = require('fs');
 let request = require('request');
 const jsdom = require("jsdom");
 const { JSDOM } = jsdom;
@@ -92,7 +61,14 @@ function cb2(err, res, body){
     }
     count--;
     if(count==0)
-        console.log(leaderboard);
+    {
+        // console.log(leaderboard);
+        var dictstring = JSON.stringify(leaderboard);       
+        
+        fs.writeFileSync("leaderBoard.json", dictstring);
+
+        
+    }
 }
 
 function processLeaderBoard(name, runs, balls, fours, sixes)
